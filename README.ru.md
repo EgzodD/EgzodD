@@ -6,7 +6,7 @@
 REST на Dart (shelf) и на Python (FastAPI), PostgreSQL, Docker, CI.
 Люблю задачи, где качество нужно доказывать цифрами, а не обещать.
 
-✉️ [почта] · 💬 [@telegram]
+📍 [Город] · 💼 открыт к предложениям · ✉️ [почта] · 💬 [@telegram]
 
 ---
 
@@ -19,10 +19,9 @@ REST на Dart (shelf) и на Python (FastAPI), PostgreSQL, Docker, CI.
 
 - **Клиент:** Flutter, Clean Architecture, Riverpod, go_router, get_it, Dio
 - **Офлайн-режим:** локальный кэш на sqflite, синхронизация при появлении сети
-- **Безопасность:** JWT + refresh, flutter_secure_storage, вход по биометрии (local_auth)
+- **Безопасность:** JWT + refresh, защищённое хранилище, вход по биометрии
 - **Функции:** транзакции с поиском и фильтрами, лимиты по категориям, цели с
-  накоплениями, графики на fl_chart, экспорт в PDF и CSV, светлая/тёмная тема,
-  локализация RU/EN
+  накоплениями, графики, экспорт в PDF и CSV, светлая/тёмная тема, локализация RU/EN
 - **Сервер:** Dart + shelf, PostgreSQL 16, materialized view для агрегатов,
   soft-delete, пагинация
 - **Инфраструктура:** Docker Compose, nginx, Prometheus + Grafana, GitHub Actions
@@ -58,27 +57,17 @@ mapping, восстановление через `/deanonymize`.
 ## Стек
 
 **Мобильная разработка**
-`Flutter` `Dart` `Riverpod` `go_router` `get_it` `Dio` `Clean Architecture`
-`sqflite` `flutter_secure_storage` `shared_preferences` `connectivity_plus`
-`Material 3` `fl_chart` `intl (RU/EN)` `local_auth` `share_plus`
+`Flutter` `Dart` `Clean Architecture` `Riverpod` `Dio` `sqflite (offline-first)`
 `flutter_test` `integration_test` `mocktail`
-`Android (Java, Gradle)` — базовый уровень
 
 **Backend**
-`Python 3.12` `FastAPI` `Uvicorn` `Pydantic v2` `SQLAlchemy 2.0` `PostgreSQL 16`
-`Dart` `shelf` `JWT` `PBKDF2 / HMAC` `REST`
+`Python 3.12` `FastAPI` `Pydantic v2` `SQLAlchemy 2.0` `PostgreSQL 16`
+`Dart` `shelf` `JWT` `HMAC`
 
 **NLP**
 `Presidio` `spaCy` `Natasha` `ruBERT (fine-tuning)` `разметка датасетов`
 `метрики NER по типам` `дистилляция`
 
 **Инфраструктура и качество**
-`Docker` `Docker Compose` `GitHub Actions` `nginx` `Prometheus` `Grafana` `Makefile` `Git`
-`pytest` `ruff` `flutter_lints` `pip-audit`
-
----
-
-## Сейчас
-
-Углубляюсь в мобильную разработку — тестирование, производительность, платформенный код.
-Параллельно продолжаю NLP: интересна обработка русского текста под ограничения по железу.
+`Docker` `Docker Compose` `GitHub Actions` `nginx` `Prometheus` `Grafana`
+`pytest` `ruff` `pip-audit`
