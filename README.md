@@ -6,7 +6,7 @@ Mobile developer — Flutter / Dart. I build the client and the backend behind i
 REST APIs in Dart (shelf) and Python (FastAPI), PostgreSQL, Docker, CI.
 I like problems where quality has to be proven with numbers rather than promised.
 
-✉️ [email] · 💬 [@telegram]
+📍 [City] · 💼 open to opportunities · ✉️ [email] · 💬 [@telegram]
 
 ---
 
@@ -19,9 +19,9 @@ infrastructure and docs. The whole stack comes up with a single `make up`.
 
 - **Client:** Flutter, Clean Architecture, Riverpod, go_router, get_it, Dio
 - **Offline mode:** local sqflite cache, syncs once connectivity returns
-- **Security:** JWT + refresh, flutter_secure_storage, biometric login (local_auth)
+- **Security:** JWT + refresh, secure storage, biometric login
 - **Features:** transactions with search and filters, per-category budgets, savings
-  goals, fl_chart graphs, PDF and CSV export, light/dark themes, RU/EN localization
+  goals, charts, PDF and CSV export, light/dark themes, RU/EN localization
 - **Server:** Dart + shelf, PostgreSQL 16, materialized view for aggregates,
   soft delete, pagination
 - **Infrastructure:** Docker Compose, nginx, Prometheus + Grafana, GitHub Actions
@@ -61,28 +61,17 @@ mapping is kept and the original is restored through `/deanonymize`.
 ## Stack
 
 **Mobile**
-`Flutter` `Dart` `Riverpod` `go_router` `get_it` `Dio` `Clean Architecture`
-`sqflite` `flutter_secure_storage` `shared_preferences` `connectivity_plus`
-`Material 3` `fl_chart` `intl (RU/EN)` `local_auth` `share_plus`
+`Flutter` `Dart` `Clean Architecture` `Riverpod` `Dio` `sqflite (offline-first)`
 `flutter_test` `integration_test` `mocktail`
-`Android (Java, Gradle)` — basic
 
 **Backend**
-`Python 3.12` `FastAPI` `Uvicorn` `Pydantic v2` `SQLAlchemy 2.0` `PostgreSQL 16`
-`Dart` `shelf` `JWT` `PBKDF2 / HMAC` `REST`
+`Python 3.12` `FastAPI` `Pydantic v2` `SQLAlchemy 2.0` `PostgreSQL 16`
+`Dart` `shelf` `JWT` `HMAC`
 
 **NLP**
 `Presidio` `spaCy` `Natasha` `ruBERT (fine-tuning)` `dataset annotation`
 `per-entity NER metrics` `distillation`
 
 **Infrastructure & quality**
-`Docker` `Docker Compose` `GitHub Actions` `nginx` `Prometheus` `Grafana` `Makefile` `Git`
-`pytest` `ruff` `flutter_lints` `pip-audit`
-
----
-
-## Currently
-
-Going deeper into mobile development — testing, performance, platform channels.
-Continuing with NLP on the side: Russian-language text processing under tight
-hardware constraints is the problem I find most interesting.
+`Docker` `Docker Compose` `GitHub Actions` `nginx` `Prometheus` `Grafana`
+`pytest` `ruff` `pip-audit`
