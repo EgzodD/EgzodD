@@ -6,7 +6,7 @@ Mobile developer — Flutter / Dart. I build the client and the backend behind i
 REST APIs in Dart (shelf) and Python (FastAPI), PostgreSQL, Docker, CI.
 I like problems where quality has to be proven with numbers rather than promised.
 
-📍 [City] · 💼 open to opportunities · ✉️ [email] · 💬 [@telegram]
+✉️ [email] · 💬 [@telegram]
 
 ---
 
