@@ -1,80 +1,88 @@
-# Привет 👋, я Денис
-# Hi 👋, I Denis
+**English** · [Русский](README.ru.md)
 
-Мобильный разработчик — Flutter / Dart. Пишу не только клиент, но и бэкенд к нему:
-REST на Dart (shelf) и на Python (FastAPI), PostgreSQL, Docker, CI.
-Люблю задачи, где качество нужно доказывать цифрами, а не обещать.
+# Hi 👋
 
-✉️ [почта] · 💬 [@telegram]
+Mobile developer — Flutter / Dart. I build the client and the backend behind it:
+REST APIs in Dart (shelf) and Python (FastAPI), PostgreSQL, Docker, CI.
+I like problems where quality has to be proven with numbers rather than promised.
 
----
-
-## Проекты
-
-### 💰 Личный бюджет — Flutter + Dart backend
-
-Кроссплатформенное приложение для учёта финансов. Монорепозиторий: клиент, сервер,
-инфраструктура и документация. Весь стек поднимается одной командой `make up`.
-
-- **Клиент:** Flutter, Clean Architecture, Riverpod, go_router, get_it, Dio
-- **Офлайн-режим:** локальный кэш на sqflite, синхронизация при появлении сети
-- **Безопасность:** JWT + refresh, flutter_secure_storage, вход по биометрии (local_auth)
-- **Функции:** транзакции с поиском и фильтрами, лимиты по категориям, цели с накоплениями,
-  графики на fl_chart, экспорт в PDF и CSV, светлая/тёмная тема, локализация RU/EN
-- **Сервер:** Dart + shelf, PostgreSQL 16, materialized view для агрегатов, soft-delete, пагинация
-- **Инфраструктура:** Docker Compose, nginx, Prometheus + Grafana, GitHub Actions
-
-→ [Репозиторий](https://github.com/EgzodD/DIPLOM_WORK_DONGY_IVT-1)
+📍 [City] · 💼 open to opportunities · ✉️ [email] · 💬 [@telegram]
 
 ---
 
-### 🔒 Сервис обезличивания персональных данных
+## Projects
 
-Находит и заменяет ПДн в русскоязычном тексте: ФИО, телефоны, адреса, паспорт, ИНН,
-СНИЛС, email, даты рождения, карты. Обезличивание обратимо — mapping и `/deanonymize`.
+### 💰 Personal Budget — Flutter + Dart backend
 
-- **Свой распознаватель под каждый тип ПДн.** Номера документов — regex с привязкой
-  к ключевому слову рядом, телефоны и адреса — паттерны под русские форматы,
-  ФИО — нейросетевая модель. Инструмент выбирается под тип, а не один на всё
-- **Выбор модели по замерам.** Harness сравнения 2×2: стоковая Natasha → стоковый
-  ruBERT → свой дообученный; отдельный прогон изолировал вклад дообучения
-- **Дообучение под реальные ошибки:** негативы из ложных срабатываний (топонимы,
-  ФИО рядом с городом) — FP 7→5 при сохранении recall 100%
-- **Качество как блокирующий гейт:** регрессия LeakRate — ноль утечек ПДн
-  на held-out наборе останавливает CI; состязательный QA закрыл 4 утечки
-- **Безопасность:** API-ключ, HMAC-подпись вебхуков, доступ к mapping
-  secure-by-default с аудитом, pip-audit блокирующим шагом
-- **Модульность:** ядро автономно; Chatwoot и документы PDF/Word — адаптеры
-  за флагами, зависимости не грузятся при выключенном флаге
+Cross-platform personal finance app. A monorepo holding the client, the server,
+infrastructure and docs. The whole stack comes up with a single `make up`.
 
-→ [Репозиторий](https://github.com/EgzodD/ANONIMIZATION_MODULE)
+- **Client:** Flutter, Clean Architecture, Riverpod, go_router, get_it, Dio
+- **Offline mode:** local sqflite cache, syncs once connectivity returns
+- **Security:** JWT + refresh, flutter_secure_storage, biometric login (local_auth)
+- **Features:** transactions with search and filters, per-category budgets, savings
+  goals, fl_chart graphs, PDF and CSV export, light/dark themes, RU/EN localization
+- **Server:** Dart + shelf, PostgreSQL 16, materialized view for aggregates,
+  soft delete, pagination
+- **Infrastructure:** Docker Compose, nginx, Prometheus + Grafana, GitHub Actions
+
+→ [Repository](https://github.com/EgzodD/DIPLOM_WORK_DONGY_IVT-1)
 
 ---
 
-## Стек
+### 🔒 PII Anonymization Service
 
-**Мобильная разработка**
+Detects and replaces personal data in Russian-language text: full names, phone
+numbers, addresses, passport numbers, tax IDs (INN), social insurance numbers
+(SNILS), emails, dates of birth, card numbers. Anonymization is reversible — the
+mapping is kept and the original is restored through `/deanonymize`.
+
+- **A dedicated recognizer per data type.** Document numbers are matched by regex
+  anchored to a nearby keyword; phones and addresses by patterns tuned to Russian
+  formats; names by a neural model. The tool is picked per entity type instead of
+  one model covering everything
+- **Model choice driven by measurement.** A 2×2 evaluation harness compared stock
+  Natasha → stock ruBERT → my fine-tuned ruBERT, with a separate run isolating the
+  contribution of fine-tuning itself
+- **Fine-tuned against real errors:** negatives drawn from actual false positives
+  (place names, a person's name next to a city) cut false positives from 7 to 5
+  while keeping 100% recall
+- **Quality as a blocking gate:** a LeakRate regression test — zero PII leaks on a
+  held-out set — fails the CI build; adversarial QA closed 4 leaks
+- **Security:** API key auth, HMAC-signed webhooks, secure-by-default mapping access
+  with an audit trail, pip-audit as a blocking CI step
+- **Modular:** the core runs standalone with no database; Chatwoot and PDF/Word
+  handling are feature-flagged adapters whose dependencies stay unloaded when off
+
+→ [Repository](https://github.com/EgzodD/ANONIMIZATION_MODULE)
+
+---
+
+## Stack
+
+**Mobile**
 `Flutter` `Dart` `Riverpod` `go_router` `get_it` `Dio` `Clean Architecture`
 `sqflite` `flutter_secure_storage` `shared_preferences` `connectivity_plus`
 `Material 3` `fl_chart` `intl (RU/EN)` `local_auth` `share_plus`
 `flutter_test` `integration_test` `mocktail`
-`Android (Java, Gradle)` — базовый уровень
+`Android (Java, Gradle)` — basic
 
 **Backend**
 `Python 3.12` `FastAPI` `Uvicorn` `Pydantic v2` `SQLAlchemy 2.0` `PostgreSQL 16`
 `Dart` `shelf` `JWT` `PBKDF2 / HMAC` `REST`
 
 **NLP**
-`Presidio` `spaCy` `Natasha` `ruBERT (fine-tuning)` `разметка датасетов`
-`метрики NER по типам` `дистилляция`
+`Presidio` `spaCy` `Natasha` `ruBERT (fine-tuning)` `dataset annotation`
+`per-entity NER metrics` `distillation`
 
-**Инфраструктура и качество**
+**Infrastructure & quality**
 `Docker` `Docker Compose` `GitHub Actions` `nginx` `Prometheus` `Grafana` `Makefile` `Git`
 `pytest` `ruff` `flutter_lints` `pip-audit`
 
 ---
 
-## Сейчас
+## Currently
 
-Углубляюсь в мобильную разработку — тестирование, производительность, платформенный код.
-Параллельно продолжаю NLP: интересна обработка русского текста под ограничения по железу.
+Going deeper into mobile development — testing, performance, platform channels.
+Continuing with NLP on the side: Russian-language text processing under tight
+hardware constraints is the problem I find most interesting.
