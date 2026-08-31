@@ -56,22 +56,33 @@ mapping is kept and the original is restored through `/deanonymize`.
 
 → [Repository](https://github.com/EgzodD/ANONIMIZATION_MODULE)
 
+
 ---
 
 ## Stack
 
 **Mobile**
-`Flutter` `Dart` `Clean Architecture` `Riverpod` `Dio` `sqflite (offline-first)`
-`flutter_test` `integration_test` `mocktail`
+
+<img src="https://skillicons.dev/icons?i=flutter,dart,sqlite&perline=3" alt="Flutter, Dart, SQLite" />
+
+`Flutter` `Dart` `sqflite (offline-first)`
+`Clean Architecture` `Riverpod` `flutter_test` `integration_test` `mocktail`
 
 **Backend**
-`Python 3.12` `FastAPI` `Pydantic v2` `SQLAlchemy 2.0` `PostgreSQL 16`
-`Dart` `shelf` `JWT` `HMAC`
+
+<img src="https://skillicons.dev/icons?i=python,fastapi,postgres&perline=3" alt="Python, FastAPI, PostgreSQL" />
+
+`Python 3.12` `FastAPI` `PostgreSQL 16`
+`Pydantic v2` `SQLAlchemy 2.0` `Dart` `shelf` `JWT` `HMAC`
 
 **NLP**
+
 `Presidio` `spaCy` `Natasha` `ruBERT (fine-tuning)` `dataset annotation`
 `per-entity NER metrics` `distillation`
 
 **Infrastructure & quality**
-`Docker` `Docker Compose` `GitHub Actions` `nginx` `Prometheus` `Grafana`
-`pytest` `ruff` `pip-audit`
+
+<img src="https://skillicons.dev/icons?i=docker,githubactions,nginx,prometheus,grafana,git&perline=6" alt="Docker, GitHub Actions, nginx, Prometheus, Grafana, Git" />
+
+`Docker` `GitHub Actions` `nginx` `Prometheus` `Grafana` `Git`
+`Docker Compose` `pytest` `ruff` `pip-audit`
