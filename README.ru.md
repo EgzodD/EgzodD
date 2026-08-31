@@ -6,7 +6,7 @@
 REST на Dart (shelf) и на Python (FastAPI), PostgreSQL, Docker, CI.
 Люблю задачи, где качество нужно доказывать цифрами, а не обещать.
 
-✉️ [почта] - egzodd@gmail.com · 💬 [@telegram] - @egzodddd
+✉️ [egzodd@gmail.com] · 💬 [tg: @egzodddd]
 
 ---
 
