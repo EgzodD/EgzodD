@@ -1,4 +1,5 @@
-# Привет 👋
+# Привет 👋, я Денис
+# Hi 👋, I Denis
 
 Мобильный разработчик — Flutter / Dart. Пишу не только клиент, но и бэкенд к нему:
 REST на Dart (shelf) и на Python (FastAPI), PostgreSQL, Docker, CI.
